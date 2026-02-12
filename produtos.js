@@ -13,17 +13,33 @@ window.AppData.products = [
     name: "Caderno A5",
     price: "R$ 24,90",
     stock: "32 un",
+    category: "Caderno"
   },
   {
     name: "Caneta Brush",
     price: "R$ 12,50",
     stock: "75 un",
+    category: "Caneta"
   },
   {
     name: "Planner 2026",
     price: "R$ 58,00",
     stock: "18 un",
+    category: "Planner"
   },
+  {
+    name: "Borracha",
+    price: "R$ 1,50",
+    stock: "140 un",
+    category: "Planner"
+  },
+  {
+    name: "Caderno Smart",
+    price: "R$ 58,00",
+    stock: "40 un",
+    category: "Caderno"
+  }
+
 ];
 
 function renderList(targetId, items, template) {
@@ -68,6 +84,10 @@ renderList("products", window.AppData.products || [], function (product) {
     '<span class="label">Estoque</span>' +
     '<div class="value">' +
     product.stock +
+    "</div>" +
+    '<span class="label">Nome</span>' +
+    '<div class="value">' +
+    product.category +
     "</div>" +
     "</li>"
   );
